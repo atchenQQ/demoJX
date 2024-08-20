@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: demoJX
+  datasource:
+    url: jdbc:mysql://localhost:3303/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # ??????
+
+
+logging:
+  level:
+    org:
+      spring:
+        demoJX: debug  # ??????
